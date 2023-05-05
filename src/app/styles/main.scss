@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.media {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("../../assets/images/autumn-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+  }
+
+  &__content {
+    position: relative;
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.media-title {
+  text-align: center;
+  font-size: 50px;
+  color: #000;
+}
+
+.media-list {
+  display: flex;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media (max-width: 870px) {
+    flex-direction: column;
+  }
+
+  &__item {
+    margin-left: 20px;
+    margin-right: 20px;
+
+    @media (max-width: 870px) {
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+  }
+
+  &__btn {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.media-list-button {
+  $self: &;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  border: 1px solid gray;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  transition: opacity 0.5s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &--autumn {
+    background-image: url("../../assets/images/autumn-bg.jpg");
+  }
+
+  &--summer {
+    background-image: url("../../assets/images/summer-bg.jpg");
+  }
+
+  &--winter {
+    background-image: url("../../assets/images/winter-bg.jpg");
+  }
+
+  &__icons {
+    display: block;
+    width: 30%;
+    height: 30%;
+    pointer-events: none;
+
+    &--pause {
+      #{$self} {
+        &__icon {
+          &--main {
+            display: none;
+          }
+
+          &--stop {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  &__icon {
+    display: block;
+    width: 100%;
+
+    &--stop {
+      display: none;
+    }
+  }
+}
