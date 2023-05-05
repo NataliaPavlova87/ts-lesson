@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+      <title>Weather Sounds</title>
+  </head>
+  <body>
+    <main class="media">
+        <div class="media__bg"></div>
+        <div class="media__content">
+            <h1 class="media__title media-title">Weather Sounds</h1>
+            <ul class="media__list media-list">
+                <li class="media-list__item">
+                    <button class="media-list__btn media-list-button media-list-button--autumn" value="autumn">
+                        <span class="media-list-button__icons">
+                            <img src="assets/images/cloud-rain.svg" alt="rain" class="media-list-button__icon media-list-button__icon--main">
+                            <img src="assets/images/pause.svg" alt="rain" class="media-list-button__icon media-list-button__icon--stop">
+                        </span>
+                    </button>
+                </li>
+                <li class="media-list__item">
+                    <button class="media-list__btn media-list-button media-list-button--summer" value="summer">
+                       <span class="media-list-button__icons">
+                            <img src="assets/images/sun.svg" alt="rain" class="media-list-button__icon media-list-button__icon--main">
+                            <img src="assets/images/pause.svg" alt="rain" class="media-list-button__icon media-list-button__icon--stop">
+                        </span>
+                    </button>
+                </li>
+                <li class="media-list__item">
+                    <button class="media-list__btn media-list-button media-list-button--winter" value="winter">
+                       <span class="media-list-button__icons">
+                            <img src="assets/images/cloud-snow.svg" alt="rain" class="media-list-button__icon media-list-button__icon--main">
+                            <img src="assets/images/pause.svg" alt="rain" class="media-list-button__icon media-list-button__icon--stop">
+                        </span>
+                    </button>
+                </li>
+            </ul>
+            <div class="media__control">
+                <input type="range" id="volume" name="volume"  min="0" max="1" step="0.1" class="media__volume media-volume">
+                <label for="volume"></label>
+            </div>
+        </div>
+    </main>
+  </body>
+</html>
+<script src="app/index.ts"></script>
